@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/* Fonte 'Passion One'bdo Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Fonte 'Sriracha' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+/* O root permite declarar variáveis dentro das CSS */
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-variant: small-caps; /* Transformar todas as letras em um viasual maior sem necessariamente deixa-las maiúsculas */
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* Transformar todas as letras em um viasual maior sem necessariamente deixa-las maiúsculas */
+    font-family: var(--fonte2);
+    font-size: 10vh; /* Ou '10%', isso faz com que o tamanho do 'h1' sempre ocupe 10% da largura de qualquer tela */
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+ 
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /* Espaçamento entre linhas */
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473); /* Cria um sombreamento interno na imagem */
+    background-size: cover; /* Faz com que a imagem se ajuste ao tamanho da caixa, mantendo a proporção original */
+    background-attachment: fixed; /* Faz com que a imagem fique estática na página. Não será afetada pelo scroll */
+}
+
+section.imagem > p { 
+    display: inline-block; /* Faz com que o tamanho da caixa de adapte ao tamanho do conteúdo */
+    background-color: rgba(0, 0, 0, 0.418);
+    padding: 5px;
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url(imagens/background002.jpg);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
